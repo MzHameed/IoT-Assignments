@@ -118,8 +118,9 @@ By completing this assignment, one will:
 
 ## 7. References & Tools
 
+- **pytorch transfer learning**: https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 - **PyTorch Hub**: https://pytorch.org/vision/stable/models.html
-- **Ultralytics YOLOv5 GitHub**: https://github.com/ultralytics/yolov5 (used in Assignment 2)
+- **Pytorch Quatization**: https://pytorch.org/docs/stable/quantization.html
 - **StackOverflow**: For debugging and scripting references
 
 > All code includes inline comments to explain functionality and logic for educational purposes.
@@ -142,8 +143,6 @@ This assignment demonstrates how to evaluate pretrained object detection models 
 - **Subset size**: 32 images only (due to memory constraints)
 - **Annotations**: Uses `instances_val2017.json` 
 
-Folder structure:
-
 ## 3. Evaluation Pipeline
 
 ###  Batch-wise Evaluation
@@ -151,17 +150,14 @@ Folder structure:
 - Metrics computed for each configuration
 
 ###  Metrics Collected
-- `mAP@0.5`
-- `mAP@0.5:0.95`
-- `Recall@100`
+- `mAP`
+- `Recall`
 - `Inference time per image`
 - `Total inference time`
 
 ###  Tools Used
 - `torchmetrics.detection.MeanAveragePrecision`
 - `torchvision.ops.nms`
-- `matplotlib` for visual output and graph plotting
-
 ---
 
 ## 4. Visualizations
@@ -178,16 +174,13 @@ Saved in folders:
 
 ## 5. Plots and Analysis
 
-Each evaluation run generates 3 main graphs:
+Each evaluation run generates 2 main graphs:
 - **mAP@0.5 vs Inference Time per Image**
 - **mAP@0.5:0.95 vs Total Inference Time**
-- **Recall@100 vs Inference Time per Image**
 
 Saved as:
 - `map50_vs_inference_time.png`
 - `map_vs_total_inference_time.png`
-- `mar100_vs_inference_time.png`
-
 These graphs help analyze tradeoffs between **accuracy and latency** across batch sizes.
 
 ---
@@ -209,7 +202,7 @@ These graphs help analyze tradeoffs between **accuracy and latency** across batc
 
 ## 7. Learning Outcomes
 
-Students will:
+One will:
 - Understand the structure of a COCO-format dataset
 - Evaluate pretrained models on real-world data
 - Analyze inference speed and accuracy tradeoffs
@@ -220,10 +213,10 @@ Students will:
 
 ## 8. References
 
-- [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)
-- [TorchMetrics](https://torchmetrics.readthedocs.io/en/stable/detection/mean_average_precision.html)
-- [COCO Dataset](https://cocodataset.org/#home)
-- [StackOverflow](https://stackoverflow.com/)
+- **Ultralytics YOLOv5**: https://github.com/ultralytics/yolov5
+- **TorchMetrics**: https://torchmetrics.readthedocs.io/en/stable/detection/mean_average_precision.html)
+- **COCO Dataset**: https://cocodataset.org/#home
+- **StackOverflow**: https://stackoverflow.com/
 
 > All code is thoroughly commented for clarity and reading.
 
