@@ -1,10 +1,10 @@
 # Assignment 1: ImageNet Classification Using Pretrained Models, Fine-Tuning, and Quantization
 
 ##   Overview
-This assignment guides students through the practical use of large-scale pretrained models (like ResNet, VGG, ViT, etc.) trained on ImageNet, and shows how to adapt them for research or edge computing use cases. The focus is on:
+This assignment guides through the practical use of large-scale pretrained models (like ResNet, VGG, ViT, etc.) trained on ImageNet, and shows how to adapt them for research or edge computing use cases. The focus is on:
 
-- Fine-tuning pretrained models on custom datasets (e.g., CIFAR-100)
-- Using pretrained models as-is for quick benchmarking
+- Fine-tuning pretrained models on custom datasets (CIFAR-100)
+- Using pretrained models as it is for quick benchmarking
 - Performing model quantization (dynamic and static)
 - Working with a manageable ImageNet validation subset
 
@@ -15,18 +15,18 @@ All experiments are designed to give hands-on experience with transfer learning,
 ## 1.   Fine-Tuning a Pretrained Model on CIFAR-100
 
 ###   Goal
-Demonstrate how to fine-tune a pretrained ImageNet model (ResNet-18) on a 100-class dataset (CIFAR-100). This is ideal for students conducting research who want to leverage pretrained models without training from scratch.
+Demonstrate how to fine-tune a pretrained ImageNet model (ResNet-18) on a 100-class dataset (CIFAR-100). This is ideal for conducting research who want to leverage pretrained models without training from scratch.
 
 ###   Key Techniques
 - Transfer Learning: Freeze early layers, train only the final block
-- Modify final FC layer: `model.fc = nn.Linear(512, 100)`
-- Apply strong data augmentation (e.g., `RandomErasing`, `ColorJitter`)
+- Modify final FC layer: `model.fc = nn.Linear(512, 100)` 
+- Apply strong data augmentation (`RandomErasing`, `ColorJitter`)
 - Use SGD optimizer with learning rate scheduling
 
 ###  Outcome
 - Final model saved to `best_resnet18_cifar100_9001.pth`
 - Prints accuracy for each epoch
-- Highlights how students can reuse pretrained models for their own class setup
+- Highlights how one can reuse pretrained models for their own class setup (The aforementioned script is designed for the CIFAR-100 dataset, but to utilize a custom dataset, simply change the final fully connected (FC) layer according to the number of classes in the target dataset)
 
 ---
 
@@ -42,17 +42,17 @@ Demonstrate how to fine-tune a pretrained ImageNet model (ResNet-18) on a 100-cl
 
 ###   Metrics
 - Accuracy across 500 classes
-- Speed (images/sec)
+- Batch Size
 - Inference time per model
 
 ###   Use Case
-This helps students assess tradeoffs of each model architecture for edge devices, real-time processing, and memory-bound applications.
+This helps to asses the tradeoffs of each model architecture for edge devices, real-time processing, and memory-bound applications.
 
 ---
 
 ## 3.  Quantization Analysis
 
-Quantization reduces model size and improves speed, especially useful for mobile/IoT.
+Quantization reduces model size and improves inference time, especially useful for mobile/IoT.
 
 ###   Dynamic Quantization
 - Uses `torch.quantization.quantize_dynamic`
@@ -70,7 +70,7 @@ Quantization reduces model size and improves speed, especially useful for mobile
 - Measures impact of quantization engine on speed and accuracy
 
 ###   Evaluation Output
-- Accuracy and latency plotted
+- Accuracy and inference plotted
 - Output image: `static_quant_analysis.png`
 - Helps identify best quantization config for target hardware
 
@@ -121,7 +121,6 @@ By completing this assignment, students will:
 - **PyTorch Hub**: https://pytorch.org/vision/stable/models.html
 - **Ultralytics YOLOv5 GitHub**: https://github.com/ultralytics/yolov5 (used in Assignment 2)
 - **StackOverflow**: For debugging and scripting references
-- **Matplotlib**: For graph visualization
 
 > All code includes inline comments to explain functionality and logic for educational purposes.
 
