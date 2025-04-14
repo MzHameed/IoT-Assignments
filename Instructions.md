@@ -14,9 +14,9 @@ This guide explains how to set up Python environments, run scripts for **Assignm
 
 ##  Step 1: Download & Install Anaconda Navigator
 
-Download: [Anaconda Official Site](https://www.anaconda.com/download/success)
+Download: **Anaconda Official Site**: https://www.anaconda.com/download/success
 
-After installation, open **Anaconda Prompt** (Windows) or terminal (Linux/macOS):
+After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 
 ---
 
@@ -82,7 +82,7 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux/macOS)
   - `visualizations_batch_4/`
   - `visualizations_batch_8/`
 
->  Some results include `.png` image visualizations and performance plots
+> Please refer to the attached .png images for additional clarity if needed
 
 ---
 
