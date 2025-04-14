@@ -1,4 +1,3 @@
-readme_content = """
 # Assignment 1: ImageNet Classification Using Pretrained Models, Fine-Tuning, and Quantization
 
 ##   Overview
