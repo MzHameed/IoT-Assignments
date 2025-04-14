@@ -107,7 +107,7 @@ Key metrics included:
 
 ## 6. Learning Outcomes
 
-By completing this assignment, students will:
+By completing this assignment, one will:
 - Understand how to use pretrained models from the PyTorch ecosystem
 - Fine-tune for new tasks with custom class counts
 - Apply quantization strategies for efficient deployment
@@ -140,7 +140,7 @@ This assignment demonstrates how to evaluate pretrained object detection models 
 
 - **Dataset**: COCO 2017 val subset
 - **Subset size**: 32 images only (due to memory constraints)
-- **Annotations**: Uses `instances_val2017.json` or `person_keypoints_val2017.json`
+- **Annotations**: Uses `instances_val2017.json` 
 
 Folder structure:
 
@@ -171,7 +171,9 @@ Each evaluated image generates a result with:
 - Class labels and confidence scores
 
 Saved in folders:
-
+- visualizations_batch_1/
+- visualizations_batch_4/
+- visualizations_batch_8/
 ---
 
 ## 5. Plots and Analysis
@@ -223,7 +225,7 @@ Students will:
 - [COCO Dataset](https://cocodataset.org/#home)
 - [StackOverflow](https://stackoverflow.com/)
 
-> All code is thoroughly commented for clarity and educational use.
+> All code is thoroughly commented for clarity and reading.
 
 ---
 
