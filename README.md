@@ -94,8 +94,6 @@ By completing this assignment, one will:
 - Conduct benchmarks with real-world performance metrics
 - Prepare models for edge/IoT applications
 
-## 6. Deliavrables
-
 ---
 
 ## 6. References & Tools
