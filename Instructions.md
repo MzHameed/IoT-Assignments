@@ -1,12 +1,12 @@
-#  Instructions for Running Assignment 1 & Assignment 2
+#  Instructions for Running Assignments 
 
-This guide explains how to set up Python environments, run scripts for **Assignment 1 (Classification)** and **Assignment 2 (Object Detection)**, and visualize results using **Jupyter Notebook** via **Anaconda Navigator**.
+This guide explains how to set up Python environments, run scripts for **ImagNet Classification Assignmnet** and **COCO Object Detection Assignmnet**, and visualize results using **Jupyter Notebook** via **Anaconda Navigator**.
 
 ---
 
 ## General Guidelines
 
-- Place **all script files and datasets inside your user directory** (e.g., `C:/Users/YourName/IOT/`)
+- Place **all script files and datasets inside your user directory** (`C:/Users/YourName/IoT/`)
 - **Update dataset paths** inside each script before running
 - Make sure Python version = 3.9 (compatible with the provided environments)
 
@@ -58,8 +58,8 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 - Open **Anaconda Navigator**
 - On the **top-left**, click the environment dropdown (default: `base (root)`)
 - Select one of the created environments:
-  - `torch_quant` → for **Assignment 1**
-  - `torch_quant1` → for **Assignment 2**
+  - `torch_quant` → for **ImagNet CLassification Assignment**
+  - `torch_quant1` → for **Coco dataset Object Detetcion Assignment**
 - Install **Jupyter Notebook** from the list if not already installed
 - Click **Launch** to open Jupyter in your browser
 
@@ -67,16 +67,14 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 
 ## Step 4: Run the Assignments
 
-### Assignment 1: Classification
-- In Jupyter, navigate to the `IOT/Assignment1_Classification` folder
-- Open the `.ipynb` or `.py` script
-- Click **Run** to simulate results
-- Visual outputs like `static_quant_analysis.png` will be generated
+### ImageNet Classification Assignmnent
+- Run `ImagNet_Calssification_Via_Pre-trained_Model.ipynb`
+- Run `ImagNet_Calssification_Via_Quantized_Pre-trained_Model.ipynb`
+- View the results in the console
 
-### Assignment 2: Object Detection
+### COCO Object Detection Assignment
 - Launch Jupyter using `torch_quant1`
-- Navigate to `IOT/Assignment2_ObjectDetection`
-- Run the object detection script
+- Run `COCO_dataset_Object_Detection.ipynb`
 - Visual output saved in:
   - `visualizations_batch_1/`
   - `visualizations_batch_4/`
