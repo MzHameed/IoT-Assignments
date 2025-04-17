@@ -1,6 +1,6 @@
 #  Instructions for Running Assignments 
 
-This guide explains how to set up Python environments, run scripts for **ImagNet Classification Assignmnet** and **COCO Object Detection Assignmnet**, and visualize results using **Jupyter Notebook** via **Anaconda Navigator**.
+This guide explains how to set up Python environments, run scripts for **ImagNet Classification** and **COCO Object Detection Assignmnets**, and visualize results using **Jupyter Notebook** via **Anaconda Navigator**.
 
 ---
 
