@@ -45,7 +45,7 @@ Quantization reduces model size and improves inference time, especially useful f
 ###   Static Quantization 
 - Uses FX Graph Mode Quantization APIs
 - Includes both:
-  - Default config mapping (`fbgemm`, `qnnpack`, `x86`) (use any one of them) 
+  - Default config mapping (`fbgemm`, `qnnpack`) (use any one of them) 
   - Custom `QConfig` with `HistogramObserver` + `MinMaxObserver`
 - Calibrates on 1 batch of real data
 - Measures impact of quantization engine on infrence time and accuracy
