@@ -58,8 +58,8 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 - Open **Anaconda Navigator**
 - On the **top-left**, click the environment dropdown (default: `base (root)`)
 - Select one of the created environments:
-  - `torch_quant` → for **ImagNet CLassification Assignment**
-  - `torch_quant1` → for **Coco dataset Object Detetcion Assignment**
+  - `torch_quant` → for **ImagNet Classification Assignment**
+  - `torch_quant1` → for **Coco Dataset Object Detetcion Assignment**
 - Install **Jupyter Notebook** from the list if not already installed
 - Click **Launch** to open Jupyter in your browser
 
