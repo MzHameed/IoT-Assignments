@@ -198,6 +198,4 @@ One will:
 
 > All code is thoroughly commented for clarity and reading.
 
----
 
-## 9. Appendix: Running Instructions
