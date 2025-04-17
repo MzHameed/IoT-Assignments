@@ -22,7 +22,7 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 
 ## Step 2: Create Conda Environments
 
-###  Environment for Assignment 1: Classification
+###  Environment for ImagNet Classification Assignment
 ```
 (base) > conda create -n torch_quant python=3.9 -y
 (base) > conda activate torch_quant
@@ -42,7 +42,7 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 
 ---
 
-###  Environment for Assignment 2: Object Detection
+###  Environment for Coco Datset Object Detection Assignment
 ```
 (base) > conda deactivate
 (base) > conda create -n torch_quant1 python=3.9 -y
