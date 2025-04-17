@@ -3,7 +3,7 @@
 ##   Overview
 This assignment is about the practical use of large-scale pretrained models (like ResNet, VGG, ViT, etc.) trained on ImageNet, and shows how to adapt them for research on edge computing use cases. The focus is on:
 
-- Using pretrained models as it is for quick benchmarking
+- Using pretrained models for benchmarking results
 - Performing model quantization (dynamic and static)
 - Working with a subset of ImageNet validation subset
 
@@ -11,9 +11,9 @@ All experiments are designed to give hands-on experience with model optimization
 
 ---
 
-## 1.  Using Pretrained ImageNet Models for Benchmarking
+## 1.  Using Pretrained ImageNet Models for Benchmarking Results 
 
-###   Supported Architectures
+###   Supported Architectures (Use any six of them)
 - ResNet18, 34, 50, 101, 152
 - VGG11-19, MobileNet, DenseNet, ViT, Swin, ConvNeXt, GoogLeNet
 
@@ -42,13 +42,13 @@ Quantization reduces model size and improves inference time, especially useful f
 - Plot Accuracy vs Inference Time
 - Output: `batch_size_analysis_combined.png`
 
-###   Static Quantization
+###   Static Quantization 
 - Uses FX Graph Mode Quantization APIs
 - Includes both:
-  - Default config mapping (`fbgemm`, `qnnpack`, `x86`)
+  - Default config mapping (`fbgemm`, `qnnpack`, `x86`) (use any one of them) 
   - Custom `QConfig` with `HistogramObserver` + `MinMaxObserver`
 - Calibrates on 1 batch of real data
-- Measures impact of quantization engine on speed and accuracy
+- Measures impact of quantization engine on infrence time and accuracy
 
 ###   Evaluation Output
 - Accuracy and inference plotted
