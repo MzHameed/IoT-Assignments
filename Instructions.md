@@ -68,6 +68,7 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 ## Step 4: Run the Assignments
 
 ### ImageNet Classification Assignmnent
+- Launch Jupyter using `torch_quant`
 - Run `ImagNet_Calssification_Via_Pre-trained_Model.ipynb`
 - Run `ImagNet_Calssification_Via_Quantized_Pre-trained_Model.ipynb`
 - View the results in the console
