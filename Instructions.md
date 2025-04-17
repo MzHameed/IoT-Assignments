@@ -95,10 +95,10 @@ After installation, open **Anaconda Prompt** (Windows) or terminal (Linux):
 
 ##  Summary
 
-| Assignment         | Conda Env      | Location                  | Tool             |
-|--------------------|----------------|---------------------------|------------------|
-| Classification     | `torch_quant`  | IOT/Assignment1_Classification | Jupyter Notebook |
-| Object Detection   | `torch_quant1` | IOT/Assignment2_ObjectDetection | Jupyter Notebook |
+| Assignment         | Conda Env      | Tool             |
+|--------------------|----------------|------------------|
+| Classification     | `torch_quant`  | Jupyter Notebook |
+| Object Detection   | `torch_quant1` | Jupyter Notebook |
 
 ---
 
