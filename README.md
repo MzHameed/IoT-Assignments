@@ -27,7 +27,7 @@ All experiments are designed to give hands-on experience with model optimization
 - Inference time per model
 
 ###   Use Case
-This helps to assess the tradeoffs of each model architecture for edge devices, real-time processing, and memory-bound applications.
+This helps to assess the tradeoff of each model architecture for edge devices, real-time processing, and memory-bound applications.
 
 ---
 
