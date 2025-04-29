@@ -104,7 +104,7 @@ By completing this assignment, one will:
 
 > All code includes inline comments to explain functionality and logic for educational purposes.
 
-# Assignment: Object Detection using YOLOv5 on COCO Subset
+# Assignment: Object Detection using YOLOv5 on COCO (Common Objetc in Context) Subset
 
 ##  Overview
 This assignment demonstrates how to evaluate pretrained object detection models (YOLOv5s and YOLOv5m) using a small subset of the COCO 2017 validation dataset. The focus is on:
@@ -194,8 +194,117 @@ One will:
 - **Ultralytics YOLOv5**: https://github.com/ultralytics/yolov5
 - **TorchMetrics**: https://torchmetrics.readthedocs.io/en/stable/detection/mean_average_precision.html)
 - **COCO Dataset**: https://cocodataset.org/#home
-- **StackOverflow**: https://stackoverflow.com/
 
+# Assignment: Fine-Tuning Pretrained ResNet18 on CIFAR (Canadian Institute For Advanced Research)-100
+
+## Overview
+
+This assignment demonstrates how to leverage **transfer learning** and **fine-tuning** by adapting a **pretrained ResNet18** model (trained on ImageNet-1000 classes) to classify images from the **CIFAR-100** dataset (100 classes).
+
+The focus is on:
+- Using pretrained models efficiently for custom tasks
+- Fine-tuning classification heads
+- Selectively unfreezing layers for better adaptation
+- Benchmarking model performance on a new dataset
+
+---
+
+## 1. Dataset Preparation
+
+- **Dataset**: CIFAR-100
+- **Classes**: 100 classes (animals, vehicles, etc.)
+- **Image Size**: Resized to (224 × 224) to match ResNet18's input requirements
+- **Automatic Download**: No need to manually download, the script handles it.
+
+---
+
+## 2. Model Adaptation and Fine-tuning
+
+### Pretrained Model:
+- **Model**: ResNet18 (from torchvision)
+- **Pretraining**: Trained on ImageNet (1000 classes)
+
+### Fine-tuning Strategy Via Transfer Learning::
+- Earlier layers capture **general visual patterns**.
+- Only the final layers need retraining to adapt to **specific categories** in CIFAR-100.
+- This saves computation and speeds up convergence.
+- Freeze all convolutional layers initially except for:
+- Last residual block (`layer4`)
+- Final fully connected layer (`fc`)
+- For Example, replace the final classification layer from:
+model.fc = nn.Linear(512, 1000)  # ImageNet has 1000 classes
+to
+model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
+---
+
+## 3. Training Pipeline
+
+- **Optimizer**: SGD (learning rate = 0.01 (try this as well:1e-6), momentum = 0.9, weight decay = 5e-4)
+- **Scheduler**: StepLR (reduce LR by half every 10 epochs)
+- **Loss Function**: CrossEntropyLoss
+- **Epochs**: 100
+
+---
+
+## 4. Observed Results
+      
+- Best Validation Accuracy | ~71%         |
+- Training will Plateaud around 20-25 epochs 
+
+---
+
+### Important:
+
+- With only `layer4` and `fc` trainable, accuracy **plateaus at ~71%**.
+- To **improve further**:
+- Unfreeze **layer3** (and optionally layer2).
+- Allow mid-level features to adapt better to the CIFAR-100 dataset.
+
+---
+
+## 5. Fine tuning Strategies for Higher Accuracy
+
+-	The provided code will give you ~71% validation accuracy.
+-	By unfreezing more layers and adjusting optimizers/schedulers, you can fine tune to reach higher accuracy (75-85% range).
+- To move beyond the initial ~71%:
+
+- **Unfreeze more layers**:
+
+for name, param in model.named_parameters():
+    if 'layer3' in name or 'layer4' in name or 'fc' in name:
+        param.requires_grad = True
+    else:
+        param.requires_grad = False
+-	Use AdamW Optimizer:
+-	AdamW with learning rate 1e-4 improves stability.
+-	Switch Scheduler to CosineAnnealingLR:
+-	Smooth learning rate decay helps avoid plateaus.
+-	Train longer:
+-	Increase total epochs to 150+ if needed.
+-	Simplify Data Augmentation:
+-	Use mild augmentations like RandomHorizontalFlip, RandomRotation (small).
+-	**Note**: The code related to this section is not included in the assignment script; it is intended for self-learning purposes to enhance skills and 
+   knowledge
+ 	
+---
+
+## 6. Learning Outcomes
+- Understand how to **adapt pretrained models** for new, custom datasets by modifying classification layers.
+- Learn the **concept and practical application of transfer learning**, where knowledge from a large dataset (ImageNet) is applied to a smaller, different dataset (CIFAR-100).
+- Gain experience in **fine-tuning pretrained networks**, including techniques like selective layer freezing, optimizer switching, and learning rate scheduling.
+- Develop skills to **analyze model architecture** and decide strategically which layers to freeze or unfreeze for maximum performance.
+- Understand the **trade-offs between training speed, convergence, and generalization** when leveraging transfer learning.
+- Understand how to **benchmark model performance** (accuracy, loss, etc.) systematically after fine-tuning.
+- Understand the importance of **data augmentation**, **optimizer selection**, and **learning rate management** in successful model transfer and adaptation.
+
+---
+
+## 7. References
+-	**PyTorch Tansfer Learning Tutorial** :https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+-	**Transfer Learning CS231n Stanford**:https://cs231n.github.io/transfer-learning/
+- **StackOverflow**: https://stackoverflow.com/
+-	**CIFAR-100 Dataset**:https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/classify/cifar100.md
+  
 > All code is thoroughly commented for clarity and reading.
 
 
