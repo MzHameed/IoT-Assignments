@@ -283,7 +283,7 @@ for name, param in model.named_parameters():
 -	Increase total epochs to 150+ if needed.
 -	Simplify Data Augmentation:
 -	Use mild augmentations like RandomHorizontalFlip, RandomRotation (small).
--	**Note**: The code related to this section is not included in the assignment script; it is intended for self-learning purposes to enhance skills and 
+-	**Note**: The code related to this section is not included in the assignment script; it is intended for self learning purposes to enhance skills and 
    knowledge
  	
 ---
@@ -303,7 +303,6 @@ for name, param in model.named_parameters():
 -	**PyTorch Tansfer Learning Tutorial** :https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 -	**Transfer Learning CS231n Stanford**:https://cs231n.github.io/transfer-learning/
 - **StackOverflow**: https://stackoverflow.com/
--	**CIFAR-100 Dataset**:https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/classify/cifar100.md
   
 **Note**: Use the provided Jupyter Notebook file `finetune_resnet18_cifar100.ipynb` to run and reproduce result described in this assignment. Additionally, all code is thoroughly commented for clarity and 
   reading.
