@@ -305,6 +305,7 @@ for name, param in model.named_parameters():
 - **StackOverflow**: https://stackoverflow.com/
 -	**CIFAR-100 Dataset**:https://github.com/ultralytics/ultralytics/blob/main/docs/en/datasets/classify/cifar100.md
   
-> All code is thoroughly commented for clarity and reading.
+**Note**: Use the provided Jupyter Notebook file `finetune_resnet18_cifar100.ipynb` to run and reproduce result described in this assignment. Additionally, all code is thoroughly commented for clarity and 
+  reading.
 
 
