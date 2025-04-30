@@ -102,7 +102,7 @@ By completing this assignment, one will:
 - **Pytorch Quatization**: https://pytorch.org/docs/stable/quantization.html
 - **StackOverflow**: For debugging and scripting references
 
-> All code includes inline comments to explain functionality and logic for educational purposes.
+**Note**:  All code includes inline comments to explain functionality and logic for educational purposes.
 
 # Assignment: Object Detection using YOLOv5 on COCO (Common Objetc in Context) Subset
 
@@ -194,7 +194,7 @@ One will:
 - **Ultralytics YOLOv5**: https://github.com/ultralytics/yolov5
 - **TorchMetrics**: https://torchmetrics.readthedocs.io/en/stable/detection/mean_average_precision.html)
 - **COCO Dataset**: https://cocodataset.org/#home
-> All code is thoroughly commented for clarity and reading.
+**Note**:  All code is thoroughly commented for clarity and reading.
 
 # Assignment: Fine-Tuning Pretrained ResNet18 on CIFAR (Canadian Institute For Advanced Research)-100
 
