@@ -249,14 +249,14 @@ model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
 
 ## 4. Observed Results
       
-- Best Validation Accuracy | ~71%         |
+- Best Validation Accuracy 71%
 - Training will Plateaud around 20-25 epochs 
 
 ---
 
 ### Important:
 
-- With only `layer4` and `fc` trainable, accuracy **plateaus at ~71%**.
+- With only `layer4` and `fc` trainable, accuracy **plateaus at 71%**.
 - To **improve further**:
   - Unfreeze **layer3** (and optionally layer2).
   - Allow mid-level features to adapt better to the CIFAR-100 dataset.
@@ -269,23 +269,23 @@ model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
 -	By unfreezing more layers and adjusting optimizers/schedulers, you can fine tune to reach higher accuracy (75-85% range).
 - To move beyond the initial ~71%:
 
-- **Unfreeze more layers**:
+   - **Unfreeze more layers**:
 
-for name, param in model.named_parameters():
-    if 'layer3' in name or 'layer4' in name or 'fc' in name:
-        param.requires_grad = True
-    else:
-        param.requires_grad = False
--	Use AdamW Optimizer:
--	AdamW with learning rate 1e-4 improves stability.
--	Switch Scheduler to CosineAnnealingLR:
--	Smooth learning rate decay helps avoid plateaus.
--	Train longer:
--	Increase total epochs to 150+ if needed.
--	Simplify Data Augmentation:
--	Use mild augmentations like RandomHorizontalFlip, RandomRotation (small).
--	**Note**: The code related to this section is not included in the assignment script; it is intended for self learning purposes to enhance skills and 
-   knowledge
+       for name, param in model.named_parameters():
+          if 'layer3' in name or 'layer4' in name or 'fc' in name:
+              param.requires_grad = True
+         else:
+              param.requires_grad = False
+  -	Use AdamW Optimizer:
+  -	AdamW with learning rate 1e-4 improves stability.
+  -	Switch Scheduler to CosineAnnealingLR:
+  -	Smooth learning rate decay helps avoid plateaus.
+  -	Train longer:
+  -	Increase total epochs to 150+ if needed.
+  -	Simplify Data Augmentation:
+  -	Use mild augmentations like RandomHorizontalFlip, RandomRotation (small).
+  -	**Note**: The code related to this section is not included in the assignment script; it is intended for self learning purposes to enhance skills and 
+    knowledge
  	
 ---
 
