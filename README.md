@@ -101,9 +101,9 @@ By completing this assignment, one will:
 - **PyTorch Hub**: https://pytorch.org/vision/stable/models.html
 - **Pytorch Quatization**: https://pytorch.org/docs/stable/quantization.html
 - **StackOverflow**: For debugging and scripting references
-
-**Note**:  All code includes inline comments to explain functionality and logic for educational purposes.
-
+---
+**Note**:  All code is thoroughly commented for clarity and reading.
+---
 # Assignment: Object Detection using YOLOv5 on COCO (Common Objetc in Context) Subset
 
 ##  Overview
