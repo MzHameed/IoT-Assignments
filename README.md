@@ -307,5 +307,6 @@ model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
 - **StackOverflow**: https://stackoverflow.com/
 ---  
 **Note**: Use the provided Jupyter Notebook file `finetune_resnet18_cifar100.ipynb` to run and reproduce result described in this assignment. Additionally, all code is thoroughly commented for clarity and reading.
+---
 
 
