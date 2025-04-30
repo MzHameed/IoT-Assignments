@@ -194,6 +194,7 @@ One will:
 - **Ultralytics YOLOv5**: https://github.com/ultralytics/yolov5
 - **TorchMetrics**: https://torchmetrics.readthedocs.io/en/stable/detection/mean_average_precision.html)
 - **COCO Dataset**: https://cocodataset.org/#home
+> All code is thoroughly commented for clarity and reading.
 
 # Assignment: Fine-Tuning Pretrained ResNet18 on CIFAR (Canadian Institute For Advanced Research)-100
 
@@ -257,8 +258,8 @@ model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
 
 - With only `layer4` and `fc` trainable, accuracy **plateaus at ~71%**.
 - To **improve further**:
--- Unfreeze **layer3** (and optionally layer2).
--- Allow mid-level features to adapt better to the CIFAR-100 dataset.
+ - Unfreeze **layer3** (and optionally layer2).
+ - Allow mid-level features to adapt better to the CIFAR-100 dataset.
 
 ---
 
@@ -304,7 +305,6 @@ for name, param in model.named_parameters():
 -	**Transfer Learning CS231n Stanford**:https://cs231n.github.io/transfer-learning/
 - **StackOverflow**: https://stackoverflow.com/
   
-**Note**: Use the provided Jupyter Notebook file `finetune_resnet18_cifar100.ipynb` to run and reproduce result described in this assignment. Additionally, all code is thoroughly commented for clarity and 
-  reading.
+**Note**: Use the provided Jupyter Notebook file `finetune_resnet18_cifar100.ipynb` to run and reproduce result described in this assignment. Additionally, all code is thoroughly commented for clarity and reading.
 
 
