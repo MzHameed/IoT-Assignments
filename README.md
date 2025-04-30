@@ -257,8 +257,8 @@ model.fc = nn.Linear(512, 100)  # CIFAR has 100 classes
 
 - With only `layer4` and `fc` trainable, accuracy **plateaus at ~71%**.
 - To **improve further**:
-- Unfreeze **layer3** (and optionally layer2).
-- Allow mid-level features to adapt better to the CIFAR-100 dataset.
+-- Unfreeze **layer3** (and optionally layer2).
+-- Allow mid-level features to adapt better to the CIFAR-100 dataset.
 
 ---
 
